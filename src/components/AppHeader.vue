@@ -6,43 +6,53 @@ export default {
             links: [
                 {
                     text: 'CHARACTERS',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'COMICS',
-                    url: '#'
+                    url: '#',
+                    current: true
                 },
                 {
                     text: 'MOVIES',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'TV',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'GAMES',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'COLLECTIBLES',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'VIDEOS',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'FANS',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'NEWS',
-                    url: '#'
+                    url: '#',
+                    current: false
                 },
                 {
                     text: 'SHOP',
-                    url: '#'
+                    url: '#',
+                    current: false
                 }
             ]
         }
@@ -59,7 +69,7 @@ export default {
             <nav>
                 <ul>
                     <li v-for="link in links">
-                        <a :href="link.url">{{ link.text }}</a>
+                        <a :class="link.current ? 'active' : ''" :href="link.url">{{ link.text }}</a>
                     </li>
                 </ul>
             </nav>
@@ -87,10 +97,15 @@ header {
 
             li {
                 font-size: .8rem;
-                padding: 12px;
 
                 a {
                     color: $second_color;
+                    padding: 35px 12px;
+
+                    &.active,
+                    &:hover {
+                        color: $primary-color;
+                    }
                 }
             }
         }
