@@ -69,16 +69,14 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
 
 header {
     height: 100px;
     border-bottom: 1px solid black;
 
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
+        @include my-display-flex;
 
         .logo {
             width: 70px;

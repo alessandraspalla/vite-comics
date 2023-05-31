@@ -69,16 +69,16 @@ export default {
                             <img src="/img/footer-facebook.png" alt="logo facebook">
                         </div>
                         <div class="image">
-                            <img src="/img/footer-twitter.png" alt="logo facebook">
+                            <img src="/img/footer-twitter.png" alt="logo twitter">
                         </div>
                         <div class="image">
-                            <img src="/img/footer-youtube.png" alt="logo facebook">
+                            <img src="/img/footer-youtube.png" alt="logo youtube">
                         </div>
                         <div class="image">
-                            <img src="/img/footer-pinterest.png" alt="logo facebook">
+                            <img src="/img/footer-pinterest.png" alt="logo pinterest">
                         </div>
                         <div class="image">
-                            <img src="/img/footer-periscope.png" alt="logo facebook">
+                            <img src="/img/footer-periscope.png" alt="logo periscope">
                         </div>
                     </div>
                 </div>
@@ -89,6 +89,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
 
 nav {
     height: 270px;
@@ -138,10 +139,7 @@ nav {
     z-index: 999;
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
+        @include my-display-flex;
 
         button {
             background-color: $second-color;

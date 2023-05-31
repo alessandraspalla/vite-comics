@@ -61,6 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
 
 #content {
     height: 100px;
@@ -73,15 +74,10 @@ export default {
     background-color: $primary-color;
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
+        @include my-display-flex;
 
         .card {
-            display: flex;
-            align-items: center;
-            height: 100%;
+            @include my-display-flex;
 
             .image {
                 width: 40px;
