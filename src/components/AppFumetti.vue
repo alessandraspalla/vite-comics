@@ -21,5 +21,9 @@ export default {
 .card-fumetto {
     width: 15%;
     margin-bottom: 2rem;
+
+    img {
+        height: calc(15vw * 1.5);
+    }
 }
 </style>
