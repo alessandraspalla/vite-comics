@@ -1,15 +1,18 @@
 <script>
+import ContainerFumetti from './ContainerFumetti.vue'
+
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    components: {
+        ContainerFumetti
+    }
 }
 </script>
 
 <template>
     <main>
         <section id="content">
-            <div class="container">
-                -- CONTENT GOES HERE --
-            </div>
+            <ContainerFumetti />
         </section>
 
         <section id="other-links">
@@ -64,7 +67,7 @@ export default {
 @use '../styles/partials/mixins.scss' as *;
 
 #content {
-    height: 100px;
+    padding: 4rem 0;
     background-color: $black;
     color: $white
 }
