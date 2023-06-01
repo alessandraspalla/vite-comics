@@ -12,7 +12,7 @@ export default {
             </div>
         </section>
 
-        <section id="shop">
+        <section id="other-links">
             <div class="container">
                 <div class="card">
                     <div class="image">
@@ -69,7 +69,7 @@ export default {
     color: $white
 }
 
-#shop {
+#other-links {
     height: 120px;
     background-color: $primary-color;
 
